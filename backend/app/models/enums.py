@@ -1,0 +1,26 @@
+from enum import StrEnum
+
+
+class TaskStatus(StrEnum):
+    PENDING = "PENDING"
+    PROBING = "PROBING"
+    EXTRACTING = "EXTRACTING"
+    TRANSCRIBING = "TRANSCRIBING"
+    INDEXING = "INDEXING"
+    SUMMARIZING = "SUMMARIZING"
+    SUCCEEDED = "SUCCEEDED"
+    FAILED = "FAILED"
+    CANCELLED = "CANCELLED"
+
+
+class UploadStatus(StrEnum):
+    INITIATED = "INITIATED"
+    COMPLETED = "COMPLETED"
+    ABORTED = "ABORTED"
+
+
+class VideoStatus(StrEnum):
+    UPLOADED = "UPLOADED"
+    PROCESSING = "PROCESSING"
+    READY = "READY"
+    FAILED = "FAILED"

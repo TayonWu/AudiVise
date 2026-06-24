@@ -1,0 +1,4 @@
+{"id":"transcript-celery","video_id":"eval-video-1","question":"Celery 在视频中有什么作用？","expected_tool":"search_transcript","expected_chunk_ids":["eval-video-1:0"],"chunks":[{"id":"eval-video-1:0","start_ms":1000,"end_ms":6000,"text":"Celery 将 FFmpeg、字幕生成和摘要任务从 API 请求中解耦。"},{"id":"eval-video-1:1","start_ms":7000,"end_ms":11000,"text":"Redis 为 Celery 提供消息代理。"}]}
+{"id":"summary","video_id":"eval-video-2","question":"请总结这个视频","expected_tool":"get_video_summary","expected_chunk_ids":[],"summary":"视频介绍了异步视频解析和可追溯 Agent 问答。","chunks":[]}
+{"id":"metadata","video_id":"eval-video-3","question":"这个视频文件有多大？","expected_tool":"get_video_metadata","expected_chunk_ids":[],"filename":"architecture.mp4","chunks":[]}
+{"id":"task-status","video_id":"eval-video-4","question":"视频解析进度怎么样？","expected_tool":"get_task_status","expected_chunk_ids":[],"task_status":"PENDING","chunks":[]}
