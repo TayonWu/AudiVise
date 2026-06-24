@@ -21,8 +21,9 @@ _ACTIVE_STATUSES = (
 
 def upgrade() -> None:
     statuses = ", ".join(_ACTIVE_STATUSES)
+    status_expression = "status::text" if op.get_bind().dialect.name == "postgresql" else "status"
     op.execute(
-        """
+        f"""
         WITH ranked AS (
             SELECT id,
                    row_number() OVER (
@@ -30,7 +31,7 @@ def upgrade() -> None:
                        ORDER BY created_at, id
                    ) AS position
             FROM analysis_tasks
-            WHERE status::text IN (
+            WHERE {status_expression} IN (
                 'PENDING', 'PROBING', 'EXTRACTING',
                 'TRANSCRIBING', 'INDEXING', 'SUMMARIZING'
             )
