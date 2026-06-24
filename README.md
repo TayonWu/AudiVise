@@ -2,12 +2,14 @@
 
 面向 AI 应用开发与 Agent 工程岗位的音视频语音内容理解项目。用户可以上传已有录音、播客或视频文件，系统异步完成音频标准化、ASR 转写、字幕切片、向量检索、AI 摘要与可追溯问答。
 
-本项目理解的是音视频中的语音内容，不包含画面目标检测、OCR 或视觉多模态分析，也不采集浏览器麦克风录音。
+<img width="2557" height="1208" alt="177e054d3b2a50a468996a4262c8cebb" src="https://github.com/user-attachments/assets/a811a68e-a0b6-4c8d-a092-1ec7781296ef" />
+<img width="1431" height="772" alt="816d6d129abd7126f6094958fa181b76" src="https://github.com/user-attachments/assets/90ead5ac-c5c9-432d-a769-24dc91770642" />
+
 
 ## 技术栈
 
 - FastAPI、Pydantic、SQLAlchemy、Alembic
-- LangGraph、Function Calling 风格工具、SSE
+- LangGraph、Function Calling 
 - Celery、Redis、PostgreSQL
 - MinIO、FFmpeg、Qdrant
 - React、TypeScript、Vite
